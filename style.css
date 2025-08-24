@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation using Flexbox */
+nav {
+  background: #333;
+}
+
+.nav-links {
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Grid Layout for Main Section */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Content + Sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+.content {
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 20px;
+}
+
+/* Flexbox inside Content for Cards */
+.card-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #eee;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack content and sidebar */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Vertical menu on smaller screens */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards on small screens */
+  }
+}
